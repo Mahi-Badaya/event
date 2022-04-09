@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class RectangularContainer extends StatelessWidget {
-  const RectangularContainer({
-    Key? key,
-  }) : super(key: key);
+  const RectangularContainer({Key? key,   this.cardChild,}) : super(key: key);
+  final Widget ?cardChild;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      child: cardChild,
       margin: EdgeInsets.all(12.0),
       height: 200,
       width: MediaQuery.of(context).size.width,

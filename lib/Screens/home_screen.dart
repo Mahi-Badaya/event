@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     RectangularContainer(),
                     Padding(
                       padding: EdgeInsets.all(9.0),
-                      child: Text('Upcoming events', style: TextStyle(fontSize: 18,color: Colors.white,),),
+                      child: Text('Upcoming events', style: TextStyle(fontSize: 18,color: Colors.white),),
                     ),
                     Carousel(),
                     RectangularContainer(),

@@ -37,11 +37,17 @@ class _CarouselState extends State<Carousel> {
               });
             },
             itemBuilder: (context, index) {
-              return GestureDetector(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const EventDetails()));
-                  },
-                child: RectangularContainer(),
+              return RectangularContainer(
+                cardChild: Stack(
+                  alignment: Alignment.bottomRight,
+                  children: [
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const EventDetails()));
+                    },
+                      child:Text('Book Now'),
+                    ),
+                  ],
+                ),
               );
             },
           ),
