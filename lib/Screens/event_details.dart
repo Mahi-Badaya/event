@@ -8,7 +8,7 @@ class EventDetails extends StatefulWidget {
   @override
   State<EventDetails> createState() => _EventDetailsState();
 }
-
+bool isShowmore = false;
 
 class _EventDetailsState extends State<EventDetails> {
   @override
@@ -103,7 +103,12 @@ class _EventDetailsState extends State<EventDetails> {
                  ),
                ],
              ),
-          Text(randomText)
+          description(randomText),
+          TextButton(onPressed: (){
+            setState(() {
+              isShowmore = !isShowmore;
+            });
+          }, child: Text((isShowmore? 'Show less': 'Show more')))
         ],
       ),
     );
