@@ -128,7 +128,7 @@ class _EventDetailsState extends State<EventDetails> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.green[400],
-                      padding: EdgeInsets.symmetric(horizontal: 140, vertical:18.0),
+                      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/3.0, vertical:18.0),
                       textStyle: TextStyle(fontSize: 19),
                       shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(12.0),
